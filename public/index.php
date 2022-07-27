@@ -38,30 +38,68 @@ if ($result->num_rows >= 1) {
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="assets/styles/style.css"/>
+
+
+	<style>
+	body{
+	background-image:url("assets/images/bg.jpg");
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position:bottom;
+
+
+	}
+
+
+	.main-form{
+
+	background-color:#def2f1;
+	padding:50px;
+	margin-left:0;
+	}
+
+
+	</style>
 </head>
 
-<body>
+<body >
 
 <?php
+
 $res = $_GET["res"];
 if ($res === "notyet") {
+
 ?>
 
 <div class="page">
 
-    <div class="head">
-        <br>
-        <figure id="logo">
-            <img src="assets/images/logo.png">
-        </figure>
-    </div>
+<div class="columns">
 
-    <div class="main">
+  <div class="column is-two-fifths"></div>
+  <div class="column">
+</div>
+  <div class="column">
+
+
+   <div class="main">
+
+
+
         <section class="section">
             <div class="container">
-                <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Enter your details
+
+
+			  <div class=" main-form" >
+
+				      <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">Join today. <br>Its Quick and Easy
                 </div>
                 <form method="post" action="connect.php">
+
+					<div class="field">
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" id="form_font" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
 
                     <div class="field">
                         <div class="control has-icons-left">
@@ -69,32 +107,63 @@ if ($res === "notyet") {
                         </div>
                     </div>
 
-                    <div class="field">
-                        <div class="control has-icons-left">
-                            <input class="input" type="email" id="form_font" name="email" placeholder="Email" required>
-                        </div>
-                    </div>
+
                     <br>
                     <div class="columns is-centered is-mobile">
                         <div class="control">
                             <label class="checkbox">
                                 <input type="checkbox" required>
-                                I agree to the <a href="policy.php">Terms of Use</a>
+                                Signup for email and text alerts
                             </label>
+
+							  <label class="checkbox">
+                            <input type="checkbox" required>
+                               By Signining in, I agree to <a href="policy.php">Terms of Use</a>
+                            </label>
+
                         </div>
+
+
+
+
                     </div>
                     <br>
                     <div class="buttons is-centered">
-                        <button class="button is-link">Connect</button>
+                        <button class="button is-link">Sign In</button>
+						<br>
+                    </div>
+
+					  <div class="buttons is-centered">
+
+						<figure id="logoz">
+						<h2 style="color:#60c0bc"><strong>sponsered by</strong></h2>
+								<br>
+								<img width="100px" src="assets/images/logo.png">
+						</figure>
                     </div>
                 </form>
+			  </div>
             </div>
             <br>
         </section>
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
 <?php
+
 }
 else if ($res === "success") {
   $redir = $_SESSION["userurl"];
@@ -116,6 +185,7 @@ else if ($res === "logoff") {
 else {
   echo "<h2>Oops!, bad 'res' parameter</h2>";
 }
+
 ?>
 
 </body>
