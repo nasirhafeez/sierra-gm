@@ -31,10 +31,10 @@ $_SESSION["user_type"] = "new";
 <head>
     <meta charset="utf-8">
     <title>
-      <?php echo htmlspecialchars($business_name); ?> WiFi</title>
+      <?php echo htmlspecialchars($business_name); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="assets/styles/bulma.min.css"/>
-    <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/all.css"/>
+    <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css"/>
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="assets/styles/style.css"/>
@@ -74,17 +74,8 @@ if ($res === "notyet") {
 
 <div class="page">
 
-<div class="columns">
 
-  <div class="column is-two-fifths"></div>
-  <div class="column">
-</div>
-  <div class="column">
-
-
-   <div class="main">
-
-
+    <div class="main">
 
         <section class="section">
             <div class="container">
@@ -184,7 +175,7 @@ else if ($res === "logoff") {
   echo "<h2>Logging off ...</h2>";
 }
 else {
-  echo "<h2>Oops!, bad 'res' parameter</h2>";
+  echo "<h2>Error: Permission Denied</h2>";
 }
 
 ?>

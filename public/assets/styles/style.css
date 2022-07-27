@@ -9,6 +9,11 @@
   max-width: 100%;
   color: black;
   font-family: "Ariel", sans-serif;
+  background-image: url("../images/background-mobile.png");
+  background-position: center;
+  background-size: contain;
+  /*background-repeat: no-repeat;*/
+  /*background-attachment: fixed;*/
 }
 
 .head
@@ -25,6 +30,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;
 }
 
 #logo
@@ -81,8 +87,10 @@ and (min-width: 768px)
 @media only screen
 and (min-width: 992px)
 {
-  #logo
+  .page
   {
-    max-width: 10%;
+    background-image: url("../images/background-desktop.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
