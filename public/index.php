@@ -38,18 +38,7 @@ $_SESSION["user_type"] = "new";
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16"/>
     <link rel="stylesheet" href="assets/styles/style.css"/>
     <style>
-        body {
-            background-image: url("assets/images/bg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom;
-        }
 
-        .main-form {
-            background-color: #def2f1;
-            padding: 50px;
-            margin-left: 0;
-        }
     </style>
 </head>
 <body>
