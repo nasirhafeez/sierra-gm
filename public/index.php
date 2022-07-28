@@ -47,9 +47,8 @@ $_SESSION["user_type"] = "new";
 
 <body>
 <?php
-
 $res = $_GET["res"];
-$res = "notyet";
+//$res = "notyet";
 if ($res === "notyet") {
   ?>
     <div class="page">
