@@ -1,31 +1,58 @@
 /*
-    *{ border: 1px solid red; }
+    *{ border: 1px solid lightgray; }
 */
 
-.page
-{
+body {
+  min-height: 100vh;
+  font-family: 'Literata', serif;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: #696767 !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #696767 !important;
+}
+
+::-ms-input-placeholder {
+  color: #696767 !important;
+}
+
+.page {
   height: 100vh;
   margin: 0 auto;
   max-width: 100%;
   color: black;
-  font-family: "Ariel", sans-serif;
-  background-image: url("../images/background-mobile.png");
+  background-image: url("../images/new-bg.jpg");
   background-position: center;
-  background-size: contain;
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
+  background-size: 100% 100%;
+  position: relative;
 }
 
-.head
-{
+.join-today {
+  display: block;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.quick {
+  font-size: 29px;
+  line-height: 0;
+  font-weight: 300;
+}
+
+.head {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
 
-.main
-{
+.main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -35,60 +62,264 @@
 
 .main-form {
   background-color: #def2f1;
-  padding: 50px;
+  padding: 10px 40px 30px 40px;
   margin-left: 0;
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  min-width: 400px;
 }
 
-#login
-{
-  margin-bottom: 5px;
+.field {
+  margin-bottom: 20px !important;
 }
 
-#margin_zero
-{
+.check-box-css .checkbox {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: Literata-Bold;
+  font-weight: bold;
+}
+
+.columns.is-centered.is-mobile.check-box-css {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.sign-in-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.sign-in-btn button {
+  padding: 10px 60px;
+  font-size: 25px;
+  background-color: #11a4d6;
+  border: 1px solid #11a4d6;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.sign-in-btn button:hover {
+  background-color: white;
+  color: #11a4d6;
+}
+
+.logo {
+  max-width: 180px;
+}
+
+#margin_zero {
   margin: 0;
 }
 
+.has-icons-left .input {
+  padding-left: 10px !important;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.sponser-by {
+  color: #60c0bc;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+
+
+
+
+
+/* The container */
+.containerCheck {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid #b5b5b585;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.containerCheck:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerCheck input:checked~.checkmark {
+  background-color: #11a4d6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerCheck input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerCheck .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.pdf-conteiner {
+  padding: 0 35px;
+  color: #000000;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.pf-t {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+
+.pdf-s-t {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+
+
+
+
+
+
 /* Media Query for iPads */
 
-@media only screen 
-and (min-width: 600px)
-{
-  #logo
-  {
-    max-width: 20%;
+@media (max-width: 768px) {
+  .page {
+    background-image: url("../images/background-mobile.png");
   }
+
+  .main-form {
+    padding: 10px 30px 30px 30px;
+    right: 50%;
+    min-width: 375px;
+    top: 81px;
+    transform: translatex(50%);
+    background-color: #60c0bc;
+  }
+
+  .join-today {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  #login {
+    margin-bottom: 10px;
+  }
+
+  .quick {
+    font-size: 23px;
+  }
+
+  .has-icons-left .input {
+    height: 40px;
+  }
+
+  .containerCheck {
+    font-size: 12px;
+  }
+
+  .sponser-by {
+    font-size: 17px;
+    color: #fff;
+  }
+
+  .logo {
+    max-width: 130px;
+  }
+
+  .field {
+    margin-bottom: 10px !important;
+  }
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  .containerCheck {
+    padding-left: 30px;
+  }
+
+  .sign-in-btn {
+    margin-top: 14px;
+  }
+
+  .pf-t {
+    font-size: 46px;
+  }
+
+  .pdf-conteiner {
+    padding: 0 20px;
+  }
+
 }
 
 /* Media Query for Desktops */
 
-@media only screen   
-and (min-width: 768px)
-{
-  #logo
-  {
-    max-width: 20%;
-  }
-
-  .main
-  {
-    height: 80%;
-  }
-
-  #login
-  {
-    margin-top: 20px;
-  }
-}
+@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen
-and (min-width: 992px)
-{
-  .page
-  {
+@media only screen and (min-width: 992px) {
+  /* .page {
     background-image: url("../images/background-desktop.jpeg");
     background-repeat: no-repeat;
     background-size: contain;
-  }
+  } */
 }
