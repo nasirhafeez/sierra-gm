@@ -2,9 +2,30 @@
     *{ border: 1px solid lightgray; }
 */
 
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Literata-Regular";
+  src: url("../fonts/Literata-Regular.ttf");
+}
+
+
+
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+
 body {
-  min-height: 100vh;
-  font-family: 'Literata', serif;
+  height: 100vh;
+  font-family: 'Literata-Regular';
   font-weight: 400;
 }
 
@@ -22,25 +43,21 @@ body {
 }
 
 .page {
-  height: 100vh;
-  margin: 0 auto;
-  max-width: 100%;
+  height: 100%;
   color: black;
-  background-image: url("../images/new-bg.jpg");
-  background-position: center;
-  background-size: 100% 100%;
   position: relative;
 }
 
 .join-today {
   display: block;
   font-size: 35px;
-  font-weight: 600;
+  font-family: 'Literata-Regular';
   margin-top: 10px;
+
 }
 
 .quick {
-  font-size: 29px;
+  font-size: 32px;
   line-height: 0;
   font-weight: 300;
 }
@@ -65,9 +82,8 @@ body {
   padding: 10px 40px 30px 40px;
   margin-left: 0;
   position: absolute;
-  right: 180px;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 15%;
+  top: 14%;
   border-radius: 10px;
   min-width: 400px;
 }
@@ -134,11 +150,17 @@ body {
   margin-top: 8px;
 }
 
+.check-box-css {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-
-
-
+.containerCheck-without-cehck {
+  text-align: center;
+  font-size: 14px;
+}
 
 /* The container */
 .containerCheck {
@@ -205,16 +227,13 @@ body {
   height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-
 
 .pdf-conteiner {
   padding: 0 35px;
   color: #000000;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu-Regular', sans-serif;
 }
 
 .pf-t {
@@ -222,9 +241,8 @@ body {
   font-weight: 500;
 }
 
-
 .pdf-s-t {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu-Regular', sans-serif;
   font-weight: 400;
 }
 
@@ -232,26 +250,45 @@ ol {
   padding-left: 20px;
 }
 
+.hidden-xs {
+  height: 100%;
+  width: 100%;
+}
 
-
-
-
+.hidden-sm {
+  display: none;
+}
 
 
 /* Media Query for iPads */
 
-@media (max-width: 768px) {
-  .page {
-    background-image: url("../images/background-mobile.png");
-  }
+@media (max-width: 767px) {
 
   .main-form {
-    padding: 10px 30px 30px 30px;
+    padding: 100px 10px 330px 10px;
     right: 50%;
-    min-width: 375px;
+    min-width: 100%;
     top: 81px;
-    transform: translatex(50%);
+    transform: unset;
+    background: url(../images/background-mobile.png);
+    position: static;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     background-color: #60c0bc;
+  }
+
+  .main-form form {
+    max-width: 400px;
+    margin: auto;
+    background: #def2f1;
+    padding: 0 20px 0 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  body {
+    overflow: unset !important;
+    height: auto;
   }
 
   .join-today {
@@ -260,7 +297,13 @@ ol {
   }
 
   #login {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    background: #def2f1;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 400px;
+    margin: auto;
   }
 
   .quick {
@@ -309,17 +352,206 @@ ol {
     padding: 0 20px;
   }
 
+  .hidden-xs {
+    display: none;
+  }
+
+  .hidden-sm {
+    display: block;
+    height: 100vh;
+    width: 100%;
+  }
 }
 
-/* Media Query for Desktops */
 
-@media only screen and (min-width: 768px) {}
+@media (min-width:767px) and (max-width: 991px) {
+  .main-form {
+    background-color: #def2f1;
+    padding: 10px 20px 10px 20px;
+    margin-left: 0;
+    position: absolute;
+    right: 11%;
+    top: 7%;
+    border-radius: 10px;
+    min-width: auto;
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  /* .page {
-    background-image: url("../images/background-desktop.jpeg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  } */
+  .has-icons-left .input {
+    height: 35px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .join-today {
+    font-size: 25px;
+    line-height: 25px;
+    margin-top: 0;
+  }
+
+  .field {
+    margin-bottom: 10px !important;
+  }
+
+  .quick {
+    font-size: 20px;
+  }
+
+  #login {
+    margin-bottom: 9px;
+  }
+
+  .sponser-by {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  .logo {
+    max-width: 90px;
+  }
+
+  .sign-in-btn button {
+    padding: 5px 20px;
+    font-size: 17px;
+    width: auto;
+  }
+
+  .sign-in-btn {
+    margin-top: 5px;
+  }
+
+  .containerCheck-without-cehck {
+    font-size: 11px;
+  }
+
+  .containerCheck {
+    padding-left: 35px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .hidden-xs {
+    height: auto;
+    width: 100%;
+  }
+
+  body {
+    overflow-y: unset !important;
+    background: #60c0bc;
+  }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+  .main-form {
+    padding: 10px 20px 10px 20px;
+    min-width: 290px;
+    right: 13%;
+  }
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  .join-today {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+
+  .quick {
+    font-size: 22px;
+  }
+
+  #login {
+    margin-bottom: 10px;
+  }
+
+  .has-icons-left .input {
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .field {
+    margin-bottom: 10px !important;
+  }
+
+  .logo {
+    max-width: 110px;
+  }
+
+  .sponser-by {
+    font-size: 16px;
+    margin-top: 3px;
+  }
+
+  .sign-in-btn button {
+    padding: 10px 30px;
+    font-size: 15px;
+    width: auto;
+  }
+
+  .containerCheck {
+    padding-left: 25px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .sign-in-btn {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width:1200px) and (max-width: 1550px) {
+  .main-form {
+    padding: 10px 20px 20px 20px;
+    right: 15%;
+    top: 14%;
+    min-width: 340px;
+  }
+
+  .join-today {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  #login {
+    margin-bottom: 10px;
+  }
+
+  .quick {
+    font-size: 20px;
+  }
+
+  .has-icons-left .input {
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .logo {
+    max-width: 140px;
+  }
+
+  .sponser-by {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .sign-in-btn button {
+    padding: 5px 40px;
+    font-size: 20px;
+    width: auto;
+  }
+
+  .field {
+    margin-bottom: 10px !important;
+  }
+
+  .containerCheck {
+    padding-left: 34px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .sign-in-btn {
+    margin-top: 14px;
+  }
 }

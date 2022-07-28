@@ -35,13 +35,14 @@ $_SESSION["user_type"] = "new";
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/styles/bulma.min.css" />
     <link rel="stylesheet" href="vendor/fortawesome/font-awesome/css/all.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200;0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;0,7..72,800;0,7..72,900;1,7..72,200;1,7..72,300;1,7..72,400;1,7..72,500;1,7..72,600;1,7..72,800;1,7..72,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/images/favicomatic/favicon-16x16.png" sizes="16x16" />
     <link rel="stylesheet" href="assets/styles/style.css" />
-
+    <style>
+        body {
+            overflow-y: hidden;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,6 +53,7 @@ $res = "notyet";
 if ($res === "notyet") {
   ?>
     <div class="page">
+        <img src="assets/images/new-bg.jpg" alt="" class="img-responsive hidden-xs">
         <div class=" main-form">
             <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">
                 <span class="join-today">Join today.</span>
@@ -72,12 +74,10 @@ if ($res === "notyet") {
                     <label class="containerCheck">
                         <input type="checkbox" required>
                         <span class="checkmark"></span>
-                        Signup for email and text alerts
+                        Sign up for email and text alerts
                     </label>
-                    <label class="containerCheck">
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                        By Signining in, I agree to <a style="color:#363636 ;" href="policy.php">Terms of Use</a>
+                    <label class="containerCheck-without-cehck">
+                        By signing in,<br> I agree to the <a style="color:#363636 ;" href="policy.php">Terms of Use</a>
                     </label>
                 </div>
                 <div class=" sign-in-btn">
@@ -85,7 +85,7 @@ if ($res === "notyet") {
                 </div>
                 <div class="buttons is-centered">
                     <figure id="logoz">
-                        <h2 class="sponser-by">sponsered by</h2>
+                        <h2 class="sponser-by">sponsored by</h2>
                         <img class="logo" src="assets/images/logo.png">
                     </figure>
                 </div>
