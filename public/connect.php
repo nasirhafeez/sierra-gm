@@ -33,7 +33,7 @@ function encode_password($plain, $challenge, $secret) {
   return bin2hex($crypted);
 }
 
-$uam_secret = "secret";
+$uam_secret = $_SERVER['UAM_SECRET'];
 $redirect_url = $_SERVER['REDIRECT_URL'];
 $mac = $_SESSION["mac"];
 $user_type = $_SESSION["user_type"];
