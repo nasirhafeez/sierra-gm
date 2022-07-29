@@ -19,7 +19,7 @@ if ($result->num_rows >= 1) {
   mysqli_close($con);
 
   $_SESSION["user_type"] = "repeat";
-  header("Location: connect.php");
+  header("Location: $redirect_url");
 } else {
   mysqli_close($con);
 }
@@ -107,7 +107,7 @@ if ($res === "notyet") {
 } else if ($res === "logoff") {
   echo "<h2>Logging off ...</h2>";
 } else if ($res === "already") {
-  header("Location: welcome.php");
+  header("Location: $redirect_url");
 } else {
   echo "<h2>Error: Permission Denied</h2>";
 }
