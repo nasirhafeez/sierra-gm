@@ -48,7 +48,6 @@ if ($result->num_rows >= 1) {
 <body>
 <?php
 $res = $_GET["res"];
-//$res = "notyet";
 if ($res === "notyet") {
   ?>
     <div class="page">
@@ -71,7 +70,7 @@ if ($res === "notyet") {
                 </div>
                 <div class="is-centered is-mobile check-box-css">
                     <label class="containerCheck">
-                        <input type="checkbox" required>
+                        <input type="checkbox" name="signup" value="Y">
                         <span class="checkmark"></span>
                         Sign up for email and text alerts
                     </label>

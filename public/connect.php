@@ -42,19 +42,24 @@ $last_updated = date("Y-m-d H:i:s");
 if ($user_type == "new") {
   $mobile = $_POST['mobile'];
   $email = $_POST['email'];
+  $signup = $_POST['signup'];
+  if ($signup != 'Y') {
+      $signup = 'N';
+  }
 
   mysqli_query($con, "
     CREATE TABLE IF NOT EXISTS `$table_name` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `mobile` varchar(45) NOT NULL,
     `email` varchar(45) NOT NULL,
+    `signup` char(1) NOT NULL,
     `mac` varchar(45) NOT NULL,
     `last_updated` varchar(45) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY (mac)
     )");
 
-  mysqli_query($con,"INSERT INTO `$table_name` (mobile, email, mac, last_updated) VALUES ('$mobile', '$email', '$mac', '$last_updated')");
+  mysqli_query($con,"INSERT INTO `$table_name` (mobile, email, signup, mac, last_updated) VALUES ('$mobile', '$email', '$signup', '$mac', '$last_updated')");
 }
 
 $username = $mac;
