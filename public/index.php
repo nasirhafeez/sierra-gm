@@ -107,7 +107,7 @@ if ($res === "notyet") {
 } else if ($res === "logoff") {
   echo "<h2>Logging off ...</h2>";
 } else if ($res === "already") {
-  header("Location: $redirect_url");
+  header("Location: welcome.php");
 } else {
   echo "<h2>Error: Permission Denied</h2>";
 }
