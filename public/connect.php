@@ -72,7 +72,7 @@ $encoded_password = encode_password($password, $challenge, $uam_secret);
 
 $uam_redirect_url = "http://$uamip:$uamport/logon?" .
   "username=" . urlencode($username) .
-  "&password=" . urlencode($encoded_password);
+  "&response=" . urlencode($encoded_password);
 
 header('Location: ' . $uam_redirect_url);
 
