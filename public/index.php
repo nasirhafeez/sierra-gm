@@ -1,5 +1,4 @@
 <?php
-
 require 'header.php';
 include 'config.php';
 
@@ -52,6 +51,7 @@ if ($res === "notyet") {
   ?>
     <div class="page">
         <img src="assets/images/new-bg.jpg" alt="" class="img-responsive hidden-xs">
+        <img src="assets/images/tab_potrait.png" alt="" class="img-responsive tablet-potrait-view">
         <div class=" main-form">
             <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">
                 <span class="join-today">Join today.</span>
