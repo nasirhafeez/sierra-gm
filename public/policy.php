@@ -18,16 +18,21 @@
     </p>
 
 
-    <p><span style="font-size:17pt">TERMS OF SERVICE</span></p>
+    <p><span style="font-size:17pt">TERMS OF USE</span></p>
 
     <p>&nbsp;</p>
 
-    <p><span style="font-size:12pt">Please read the entire Terms of Service to understand your rights and obligations in relation to the Agreement.</span>
+    <p><span style="font-size:12pt">Please read the entire Terms of Use to understand your rights and obligations in relation to the Agreement.</span>
     </p>
 
     <p>&nbsp;</p>
 
-    <p><span style="font-size:12pt">When using TransitWiFi internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the internet --whether the connection is facilitated through wired or wireless technology. Security issues include, without limitation, interception of transmissions, loss of data, and the introduction of viruses and other programs that can corrupt or damage your computer.</span>
+    <p><span style="font-size:12pt">When using TransitWiFi internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the internet --whether the connection is facilitated through wired or wireless technology. </span>
+    </p>
+
+    <p>&nbsp;</p>
+
+    <p><span style="font-size:12pt">Security issues include, without limitation, interception of transmissions, loss of data, and the introduction of viruses and other programs that can corrupt or damage your computer.</span>
     </p>
 
     <p>&nbsp;</p>
@@ -37,7 +42,7 @@
 
     <p>&nbsp;</p>
 
-    <p><span style="font-size:12pt">Use of the TransitWiFi&nbsp; wireless network is subject to the general restrictions outlined below. If abnormal, illegal, or unauthorized behavior is detected, including heavy consumption of bandwidth,TransitWiFi reserves the right to permanently disconnect the offending device from the wireless network.</span>
+    <p><span style="font-size:12pt">Use of the TransitWiFi wireless network is subject to the general restrictions outlined below. If abnormal, illegal, or unauthorized behavior is detected, including heavy consumption of bandwidth,TransitWiFi reserves the right to permanently disconnect the offending device from the wireless network.</span>
     </p>
 
     <p>&nbsp;</p>
