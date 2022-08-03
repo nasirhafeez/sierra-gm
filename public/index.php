@@ -94,14 +94,15 @@ if ($res === "notyet") {
   <?php
 
 } else if ($res === "success") {
-  $redir = $_SESSION["userurl"];
-  if (isset($redir)) {
-    echo "<head>";
-    echo '<meta http-equiv="refresh" content="3;URL=\'' . $redir . '\'">';
-    echo "</head>";
-  } else {
-    echo "<h2>Log-in successful!</h2>";
-  }
+//  $redir = $_SESSION["userurl"];
+//  if (isset($redir)) {
+//    echo "<head>";
+//    echo '<meta http-equiv="refresh" content="3;URL=\'' . $redir . '\'">';
+//    echo "</head>";
+//  } else {
+//    echo "<h2>Log-in successful!</h2>";
+//  }
+  header("Location: $redirect_url");
 } else if ($res === "failed") {
   echo "<h2>Whoops, failed to authenticate</h2>";
 } else if ($res === "logoff") {
