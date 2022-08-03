@@ -15,8 +15,6 @@
   src: url("../fonts/Literata-Regular.ttf");
 }
 
-
-
 @font-face {
   font-family: "Ubuntu-Regular";
   src: url("../fonts/Ubuntu-Regular.ttf");
@@ -119,6 +117,10 @@ body {
   font-weight: bold;
 }
 
+.browse-form {
+  display: inline-block;
+}
+
 .columns.is-centered.is-mobile.check-box-css {
   flex-direction: column;
   align-items: center;
@@ -127,6 +129,12 @@ body {
 }
 
 .sign-in-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.browser-btn {
   display: flex;
   justify-content: center;
   margin-top: 24px;
@@ -144,7 +152,24 @@ body {
   text-transform: uppercase;
 }
 
+.browser-btn button {
+  padding: 10px 60px;
+  font-size: 25px;
+  background-color: #11a4d6;
+  border: 1px solid #11a4d6;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+  width: 100%;
+  text-transform: uppercase;
+}
+
 .sign-in-btn button:hover {
+  background-color: white;
+  color: #11a4d6;
+}
+
+.browser-btn button:hover {
   background-color: white;
   color: #11a4d6;
 }
@@ -330,6 +355,16 @@ ol {
     margin: auto;
   }
 
+  #browse {
+    margin-bottom: 0px;
+    background: #def2f1;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+  }
+
   .quick {
     font-size: 23px;
   }
@@ -368,6 +403,10 @@ ol {
     margin-top: 14px;
   }
 
+  .browser-btn {
+    margin-top: 14px;
+  }
+
   .pf-t {
     font-size: 46px;
   }
@@ -397,6 +436,11 @@ ol {
   .hidden-xs {
     display: none;
   }
+
+  .browse-form {
+    display: block;
+  }
+
   .main-form {
     background-color: #def2f1;
     padding: 10px 20px 30px 20px;
@@ -431,6 +475,10 @@ ol {
     margin-bottom: 9px;
   }
 
+  #browse {
+    margin-bottom: 9px;
+  }
+
   .note {
     width: 95%;
     padding-left: 5px;
@@ -451,6 +499,16 @@ ol {
   }
 
   .sign-in-btn {
+    margin-top: 10px;
+  }
+
+  .browser-btn button {
+    padding: 9px 20px;
+    font-size: 19px;
+    width: 100%;
+  }
+
+  .browser-btn {
     margin-top: 10px;
   }
 
@@ -492,11 +550,19 @@ ol {
     margin-top: 5px;
   }
 
+  .browse-form {
+    display: block;
+  }
+
   .quick {
     font-size: 22px;
   }
 
   #login {
+    margin-bottom: 10px;
+  }
+
+  #browse {
     margin-bottom: 10px;
   }
 
@@ -529,6 +595,12 @@ ol {
     width: auto;
   }
 
+  .browser-btn button {
+    padding: 10px 30px;
+    font-size: 15px;
+    width: auto;
+  }
+
   .containerCheck {
     padding-left: 25px;
     margin-bottom: 5px;
@@ -536,6 +608,10 @@ ol {
   }
 
   .sign-in-btn {
+    margin-top: 5px;
+  }
+
+  .browser-btn {
     margin-top: 5px;
   }
 }
@@ -557,6 +633,10 @@ ol {
     margin-bottom: 10px;
   }
 
+  #browse {
+    margin-bottom: 10px;
+  }
+
   .quick {
     font-size: 20px;
   }
@@ -575,12 +655,22 @@ ol {
     padding-left: 25px;
   }
 
+  .browse-form {
+    display: block;
+  }
+
   .sponser-by {
     font-size: 16px;
     margin-top: 8px;
   }
 
   .sign-in-btn button {
+    padding: 5px 40px;
+    font-size: 20px;
+    width: auto;
+  }
+
+  .browser-btn button {
     padding: 5px 40px;
     font-size: 20px;
     width: auto;
@@ -597,6 +687,10 @@ ol {
   }
 
   .sign-in-btn {
+    margin-top: 14px;
+  }
+
+  .browser-btn {
     margin-top: 14px;
   }
 }
