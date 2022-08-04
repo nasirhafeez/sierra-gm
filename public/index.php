@@ -2,26 +2,26 @@
 require 'header.php';
 include 'config.php';
 
-$_SESSION["mac"] = $_GET["mac"];
-$_SESSION["challenge"] = $_GET["challenge"];
-$_SESSION["uamip"] = $_GET["uamip"];
-$_SESSION["uamport"] = $_GET["uamport"];
-$_SESSION["userurl"] = $_GET["userurl"];
-$_SESSION["user_type"] = "new";
-
-# Checking DB to see if user exists or not.
-$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
-
-if ($result->num_rows >= 1) {
-  $row = mysqli_fetch_array($result);
-
-  mysqli_close($con);
-
-  $_SESSION["user_type"] = "repeat";
-  header("Location: connect.php");
-} else {
-  mysqli_close($con);
-}
+//$_SESSION["mac"] = $_GET["mac"];
+//$_SESSION["challenge"] = $_GET["challenge"];
+//$_SESSION["uamip"] = $_GET["uamip"];
+//$_SESSION["uamport"] = $_GET["uamport"];
+//$_SESSION["userurl"] = $_GET["userurl"];
+//$_SESSION["user_type"] = "new";
+//
+//# Checking DB to see if user exists or not.
+//$result = mysqli_query($con, "SELECT * FROM `$table_name` WHERE mac='$_SESSION[mac]'");
+//
+//if ($result->num_rows >= 1) {
+//  $row = mysqli_fetch_array($result);
+//
+//  mysqli_close($con);
+//
+//  $_SESSION["user_type"] = "repeat";
+//  header("Location: connect.php");
+//} else {
+//  mysqli_close($con);
+//}
 
 ?>
 <!doctype html>
@@ -50,8 +50,8 @@ $res = $_GET["res"];
 if ($res === "notyet") {
   ?>
     <div class="page">
-        <img src="assets/images/background-desktop.jpg" alt="" class="img-responsive hidden-xs">
-        <img src="assets/images/background-tablet-portrait.png.png" alt="" class="img-responsive tablet-potrait-view">
+        <img src="assets/images/background-desktop.png" alt="" class="img-responsive hidden-xs">
+        <img src="assets/images/background-tablet-portrait.png" alt="" class="img-responsive tablet-potrait-view">
         <div class=" main-form">
             <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">
                 <span class="join-today">Join today.</span>
