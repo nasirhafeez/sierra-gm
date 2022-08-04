@@ -25,17 +25,17 @@ require 'header.php';
 <body>
 
     <div class="page">
-        <img src="assets/images/new-bg.jpg" alt="" class="img-responsive hidden-xs">
-        <img src="assets/images/tab_potrait.png" alt="" class="img-responsive tablet-potrait-view">
+        <img src="assets/images/background-desktop.jpg" alt="" class="img-responsive hidden-xs">
+        <img src="assets/images/background-tablet-portrait.png.png" alt="" class="img-responsive tablet-potrait-view">
         <div class=" main-form">
-            <div id="browse" class="content is-size-5 has-text-centered has-text-weight-bold">
+            <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">
                 <span class="join-today">Hello there.</span>
                 <span class="quick">It's time to enjoy some</span>
                 <br>
                 <span class="quick">Complimentary Wifi!</span>
             </div>
             <form class="browse-form" method="get" action="https://www.google.com">
-                <div class="browser-btn">
+                <div class="sign-in-btn">
                     <button class="">BROWSE INTERNET</button>
                 </div>
                 <div class="buttons is-centered">

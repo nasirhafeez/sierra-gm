@@ -19,7 +19,7 @@ require 'header.php';
 <body>
 
 <div class="page">
-    <img src="assets/images/new-bg.jpg" alt="" class="img-responsive hidden-xs">
+    <img src="assets/images/background-desktop.jpg" alt="" class="img-responsive hidden-xs">
     <div class=" main-form">
         <div id="login" class="content is-size-5 has-text-centered has-text-weight-bold">
             <span class="content has-text-centered is-size-6">Welcome!</span>
