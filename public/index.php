@@ -65,7 +65,7 @@ if ($res === "notyet") {
                 </div>
                 <div class="field">
                     <div class="control has-icons-left">
-                        <input class="input" type="number" id="form_font" name="mobile" placeholder="Mobile Number" required>
+                        <input class="input" type="tel" id="form_font" name="mobile" placeholder="Mobile Number" required>
                     </div>
                 </div>
                 <div class="is-centered is-mobile check-box-css">
